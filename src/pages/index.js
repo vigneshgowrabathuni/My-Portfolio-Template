@@ -1,50 +1,39 @@
 import React from 'react'
-import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle, Jumbotron, Button } from 'reactstrap'
-import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import { Row, Col, Jumbotron, Button, Progress } from 'reactstrap'
+import Slider from "react-slick";
+import Layout from '../components/layout';
+import { ProfessionalSkills } from '../components/ProfessionalSkills';
+import { WorkExperience } from '../components/WorkExperience';
+import { Education } from '../components/Education';
+import { WorkedOn } from '../components/WorkedOn';
+import { Contact } from '../components/Contact';
 
-const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
+
+
+const IndexPage = () => {
+  
   return (
     <Layout>
-      {/* <Container> */}
-        {/* {posts.map(({ node: post }) => (
-          <Card style={{marginBottom: 10}} key={post.id}>
-            <CardBody>
-              <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
-              <CardText>{post.excerpt}</CardText>
-            </CardBody>
-          </Card>
-        ))} */}
-        <Jumbotron>
-        <h1 className="display-3 text-center">Hi! I'M VIGNESH</h1>
-        
+      <Jumbotron>
+        <h1 className="text-center">Hi! I'M <span className="font-weight-normal">VIGNESH</span></h1>
+
       </Jumbotron>
-      {/* </Container> */}
-    </Layout>
+      <div className="text-center p-4" id="resume">
+        <Button color="primary">Download Resume</Button>
+        <p className="pt-3 pb-3">
+          Hello!, I'm Vignesh Gowrabathuni. Full Stack Web Developer<br />
+          Experienced Senior Software Engineer with a demonstrated history of working in the information technology and services industry.<br />
+          Experienced with design, develop and support various componets in projects throughout all phases of the software development life cycle.<br />
+          Certified in Angular 7 and Azure Cloud Solutions from Udemy.
+        </p>
+      </div>
+      <ProfessionalSkills />
+      <WorkExperience />
+      <Education />
+      <WorkedOn />
+      <Contact />
+    </Layout >
   )
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            contentType
-            date(formatString: "MMMM DD, YYYY")
-            path
-            hidden
-          }
-        }
-      }
-    }
-  }
-`

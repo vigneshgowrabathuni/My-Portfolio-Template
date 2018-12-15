@@ -88,16 +88,14 @@
 
 // page-level layout
 
-.App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 
-  & > .pageContent {
-    flex: 1;
-    overflow: auto;
-  }
+
+html, body{
+  background-color: 	#F8F8F8;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 
 .navbar-nav {
   flex-direction: row!important;
@@ -106,3 +104,171 @@
     padding-left: 10px; 
   }
 }
+
+.jumbotron {
+  background-color: #FFFFFF;
+}
+
+.simple-card {
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+  background-color: #FFFFFF;
+  padding:40px;
+  margin: 25px;
+  &:hover {
+    box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
+    .image_overlay {
+      opacity: 0.7;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.border-card {
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+  background-color: #FFFFFF;
+  padding: 40px;
+  margin-bottom: 30px;
+  &:hover {
+    box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
+    .image_overlay {
+      opacity: 0.7;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.certificate-card {
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+  background-color: #FFFFFF;
+  padding: 40px 10px;
+  margin: 25px;
+  &:hover {
+    box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
+    .image_overlay {
+      opacity: 0.7;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2780E3; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #007bff; 
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .border-card {
+    margin: 5px;
+    border-left: 6px solid #007bff;
+    border-right: 6px solid #007bff;
+  }
+  .jumbotron {
+    padding: 8rem 2rem;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+  .border-card img {
+    width: 50%;
+  }
+  .w-logo img {
+    width: 100px;
+  }
+  .pvp-logo img {
+    width: 50px;
+  }
+  .ibm-logo img {
+    width: 130px;
+  }
+  .udemy-logo img {
+    width: 70px;
+  }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) { 
+  .border-card {
+    margin: 5px;
+    border-left: 6px solid #007bff;
+    border-right: 6px solid #007bff;
+  }
+  .jumbotron {
+    padding: 8rem 2rem;
+  }
+  .border-card img {
+    width: 50%;
+  }
+  .w-logo img {
+    width: 100px;
+  }
+  .pvp-logo img {
+    width: 50px;
+  }
+  .ibm-logo img {
+    width: 130px;
+  }
+  .udemy-logo img {
+    width: 70px;
+  }
+ }
+
+ // Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+  .border-card {
+    margin: 0 25px;
+    border-left: 6px solid #007bff;
+  }
+  .jumbotron {
+    padding: 12rem 2rem;
+  }
+  .border-card img {
+    width: 25%;
+  }
+  .w-logo img {
+    width: 60px;
+  }
+  .pvp-logo img {
+    width: 50px;
+  }
+  .ibm-logo img {
+    width: 130px;
+  }
+  .udemy-logo img {
+    width: 70px;
+  }
+ }

@@ -1,18 +1,18 @@
 import React from 'react'
 
 export default class HTML extends React.Component {
-  render () {
+  render() {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <meta charSet='utf-8' />
+          <meta />
           <meta httpEquiv='x-ua-compatible' content='ie=edge' />
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1, shrink-to-fit=no'
           />
-          <script src='https://identity.netlify.com/v1/netlify-identity-widget.js' />
-          <script src='/admin/netlify_redirect.js' />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

@@ -6,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink} from 'reactstrap';
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -28,38 +24,35 @@ export default class Menu extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="primary" dark expand="md">
+      <div >
+        <Navbar color="primary" dark expand="md" style={{position: "fixed", width: "100%", zIndex: "100"}}>
           <NavbarBrand href="/">My Portfolio</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">ABOUT</NavLink>
+                <NavLink href="#about">ABOUT</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">SKILLS</NavLink>
+                <NavLink href="#skills">SKILLS</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">PORTFOLIO</NavLink>
+                <NavLink href="#resume">RESUME</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">EXPERIENCE</NavLink>
+                <NavLink href="#work-experience">EXPERIENCE</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">EDUCATION</NavLink>
+                <NavLink href="#education">EDUCATION</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">REFERENCES</NavLink>
+                <NavLink href="#references">REFERENCES</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">BLOG</NavLink>
+                <NavLink href="#blog">BLOG</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">CALENDAR</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/components/">CONTACT</NavLink>
+                <NavLink href="#contact">CONTACT</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
