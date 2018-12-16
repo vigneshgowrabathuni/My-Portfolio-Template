@@ -1,10 +1,11 @@
 import React from 'react'
-import { Row, Col, Jumbotron, Button, Progress } from 'reactstrap'
+import { Row, Col, Jumbotron, Button, Progress, Container } from 'reactstrap'
 import Slider from "react-slick";
 import Layout from '../components/layout';
 import { ProfessionalSkills } from '../components/ProfessionalSkills';
 import { WorkExperience } from '../components/WorkExperience';
 import { Education } from '../components/Education';
+import { Certifications } from '../components/Certifications';
 import { WorkedOn } from '../components/WorkedOn';
 import { Contact } from '../components/Contact';
 
@@ -14,6 +15,7 @@ const IndexPage = () => {
   
   return (
     <Layout>
+      <Container>
       <Jumbotron>
         <h1 className="text-center">Hi! I'M <span className="font-weight-normal">VIGNESH</span></h1>
 
@@ -30,8 +32,10 @@ const IndexPage = () => {
       <ProfessionalSkills />
       <WorkExperience />
       <Education />
+      <Certifications />
       <WorkedOn />
       <Contact />
+      </Container>
     </Layout >
   )
 }

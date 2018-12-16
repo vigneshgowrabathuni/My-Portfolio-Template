@@ -14,7 +14,7 @@ export default class Experience extends React.Component {
         <Col xs="12" sm="12" md="6">
           <div className="border-card">
             <h5 className="text-center text-primary font-weight-normal pb-2">March 2018 - Present</h5>
-            <div className="text-center">
+            <div className="text-center wipro-logo">
               <img src={MindreeLogo} alt="Mindtree logo" className="img-thumbnail rounded"></img>
             </div>
             <h3 className="text-center font-weight-normal pb-3">Mindtree Limited</h3>

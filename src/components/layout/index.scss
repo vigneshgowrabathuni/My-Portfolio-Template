@@ -157,7 +157,6 @@ html, body{
   transition: all 500ms ease-out;
   background-color: #FFFFFF;
   padding: 40px 10px;
-  margin: 25px;
   &:hover {
     box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
     .image_overlay {
@@ -218,6 +217,10 @@ html, body{
   .udemy-logo img {
     width: 70px;
   }
+  .wipro-logo img {
+    width: 90px;
+    padding: 16px 0px;
+  }
  }
 
 // Small devices (landscape phones, 576px and up)
@@ -245,6 +248,10 @@ html, body{
   .udemy-logo img {
     width: 70px;
   }
+  .wipro-logo img {
+    width: 90px;
+    padding: 16px 0px;
+  }
  }
 
  // Large devices (desktops, 992px and up)
@@ -270,5 +277,9 @@ html, body{
   }
   .udemy-logo img {
     width: 70px;
+  }
+  .wipro-logo img {
+    width: 90px;
+    padding: 16px 0px;
   }
  }

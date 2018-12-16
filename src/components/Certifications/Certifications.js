@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col, Progress } from 'reactstrap'
 import UdemyLogo from '../../../assets/images/udemy-logo.png';
 import IBMLogo from '../../../assets/images/ibm-logo.png';
 import CollegeLogo from '../../../assets/images/college-logo.png';
@@ -20,7 +21,7 @@ export default class Certifications extends React.Component {
               <div className="text-center udemy-logo">
                 <img src={UdemyLogo} alt="Udemy logo" className="img-thumbnail rounded"></img>
               </div>
-              <h3 className="text-center font-weight-normal pb-3 pt-2">Udemy</h3>
+              <h4 className="text-center font-weight-normal pb-3 pt-2">Udemy</h4>
             </div>
           </Col>
           <Col xs="12" sm="12" md="3">
@@ -31,7 +32,7 @@ export default class Certifications extends React.Component {
               <div className="text-center udemy-logo">
                 <img src={UdemyLogo} alt="Udemy logo" className="img-thumbnail rounded"></img>
               </div>
-              <h3 className="text-center font-weight-normal pb-3 pt-2">Udemy</h3>
+              <h4 className="text-center font-weight-normal pb-3 pt-2">Udemy</h4>
           </div>
           </Col>
           <Col xs="12" sm="12" md="3">
@@ -42,7 +43,7 @@ export default class Certifications extends React.Component {
               <div className="text-center ibm-logo">
                 <img src={IBMLogo} alt="IBM logo" className="img-thumbnail rounded"></img>
               </div>
-              <h3 className="text-center font-weight-normal pb-3 pt-2">IBM</h3>
+              <h4 className="text-center font-weight-normal pb-3 pt-2">IBM</h4>
           </div>
           </Col>
           <Col xs="12" sm="12" md="3">
@@ -53,7 +54,7 @@ export default class Certifications extends React.Component {
               <div className="text-center w-logo">
                 <img src={CollegeLogo} alt="College logo" className="img-thumbnail rounded"></img>
               </div>
-              <h3 className="text-center font-weight-normal pb-3 pt-2">SiCE</h3>
+              <h4 className="text-center font-weight-normal pb-3 pt-2">SiCE</h4>
             </div>
           </Col>
         </Row>
