@@ -1,19 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { Header } from '../Header';
 import 'bootstrap/dist/css/bootstrap.css';
-import './index.scss'
-
+import './index.scss';
 
 const TemplateWrapper = ({ children }) => (
-  <div className='App'>
+  <div className="App">
     <Header />
-    <div className='pageContent'>
-      {children}
-    </div>
+    <div style={{marginTop: '80px'}}>{children}</div>
     {/* <Footer /> */}
   </div>
 );
 
-
 export default TemplateWrapper;
-

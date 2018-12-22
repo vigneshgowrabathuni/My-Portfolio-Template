@@ -91,7 +91,7 @@
 
 
 html, body{
-  background-color: 	#F8F8F8;
+  background-color: 	#F0F0F0;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -110,7 +110,6 @@ html, body{
 }
 
 .simple-card {
-  cursor: pointer;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
@@ -130,7 +129,6 @@ html, body{
 }
 
 .border-card {
-  cursor: pointer;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
@@ -166,6 +164,55 @@ html, body{
   img {
     width: 100%;
   }
+}
+
+.horizontal-card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+  background-color: #FFFFFF;
+  padding:40px;
+  margin: 25px;
+  &:hover {
+    box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
+    .image_overlay {
+      opacity: 0.7;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.profile-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-list li {
+  margin-bottom: 13px;
+}
+
+.profile-list .title {
+  display: block;
+  width: 120px;
+  float: left;
+  color: #333333;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.profile-list .cont {
+  display: block;
+  margin-left: 125px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #9da0a7;
 }
 
  ::-webkit-scrollbar {
@@ -225,6 +272,9 @@ html, body{
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767.98px) { 
+  .simple-card {
+    margin: 5px;
+  }
   .border-card {
     margin: 5px;
     border-left: 6px solid #007bff;
@@ -252,6 +302,22 @@ html, body{
     width: 90px;
     padding: 16px 0px;
   }
+
+  .horizontal-card {
+    margin: 5px;
+    
+  }
+  .profile-list .title {
+    margin-bottom: 3px;
+}
+  .profile-list .title, .profile-list .cont {
+    width: 100%;
+    float: none;
+    line-height: 1.2;
+}
+.profile-list .cont {
+  margin-left: 0;
+}
  }
 
  // Large devices (desktops, 992px and up)

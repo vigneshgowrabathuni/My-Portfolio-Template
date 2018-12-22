@@ -31,10 +31,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
+    "build": "npm run format && gatsby build",
+    "start": "npm run format && gatsby develop",
     "test": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.js"
   },
   "devDependencies": {
     "node-sass": "^4.10.0",

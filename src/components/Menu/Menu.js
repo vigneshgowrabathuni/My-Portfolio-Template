@@ -6,7 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink} from 'reactstrap';
+  NavLink,
+} from 'reactstrap';
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -14,18 +15,23 @@ export default class Menu extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
   render() {
     return (
-      <div >
-        <Navbar color="primary" dark expand="md" style={{position: "fixed", width: "100%", zIndex: "100"}}>
+      <div>
+        <Navbar
+          color="primary"
+          dark
+          expand="md"
+          style={{ position: 'fixed', width: '100%', zIndex: '100', top: '0' }}
+        >
           <NavbarBrand href="/">My Portfolio</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
